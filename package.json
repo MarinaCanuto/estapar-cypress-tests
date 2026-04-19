@@ -1,0 +1,13 @@
+{
+  "name": "teste-qa-estapar",
+  "version": "1.0.0",
+  "description": "Automação de testes E2E com Cypress",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "npm run cypress:run"
+  },
+  "devDependencies": {
+    "cypress": "^15.14.0"
+  }
+}
