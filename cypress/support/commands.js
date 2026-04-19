@@ -22,7 +22,7 @@ Cypress.Commands.add("login", (email, senha) => {
   cy.get('[name="login[password]"]').type(senha);
 
   cy.get("#send2").click();
-
+// validação por URL para evitar dependência de elementos com hover (instável em headless)
   cy.url({ timeout: 10000 }).should("include", "/customer/account");
 });
 
@@ -38,7 +38,7 @@ Cypress.Commands.add("adicionarProdutoAoCarrinho", () => {
     .should("have.length.greaterThan", 0)
     .first()
     .click();
-
+// force necessário devido ao comportamento do Magento com overlay nos swatches
   cy.get(".swatch-attribute.size .swatch-option")
     .first()
     .click({ force: true });
@@ -65,6 +65,7 @@ Cypress.Commands.add("irParaCheckout", () => {
 });
 
 Cypress.Commands.add("preencherEnderecoCheckout", () => {
+// aguarda carregamento do step de shipping para evitar flakiness
   cy.contains("Shipping", { timeout: 20000 }).should("be.visible");
 
   cy.get('[name="street[0]"]', { timeout: 20000 })
