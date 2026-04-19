@@ -1,5 +1,3 @@
-console.log("commands carregado");
-
 Cypress.Commands.add("cadastrarUsuario", (nome, sobrenome, email, senha) => {
   cy.visit("/customer/account/create/");
 
