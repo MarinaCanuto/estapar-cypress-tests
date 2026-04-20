@@ -1,11 +1,10 @@
-describe('Cadastro de usuário', () => {
+describe("Cadastro de usuário", () => {
+  it("Deve cadastrar usuário com sucesso", () => {
+    const email = `marina_${Date.now()}@teste.com`;
+    const senha = "Senha@123";
 
-  it('Deve cadastrar usuário com sucesso', () => {
+    cy.cadastrarUsuario(email, senha);
 
-    const email = `marina_${Date.now()}@teste.com`
-
-    cy.cadastrarUsuario('Marina', 'Teste', email, 'Senha@123')
-
-    cy.url().should('include', 'account')
-  })
-})
+    cy.url().should("include", "account");
+  });
+});

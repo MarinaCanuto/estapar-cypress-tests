@@ -5,9 +5,19 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "npm run cypress:run"
+    "cypress:run:headless": "cypress run --browser chrome --headless",
+
+    "clean:reports": "if exist cypress\\reports rd /s /q cypress\\reports && if exist cypress\\videos rd /s /q cypress\\videos && if exist cypress\\screenshots rd /s /q cypress\\screenshots",
+
+    "report:merge": "npx mochawesome-merge cypress/reports/*.json > final_report.json",
+    "report:generate": "npx marge final_report.json -f report -o cypress/reports",
+
+    "test": "npm run clean:reports && npm run cypress:run:headless && npm run report:merge && npm run report:generate"
   },
   "devDependencies": {
-    "cypress": "^15.14.0"
+    "cypress": "^15.14.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }

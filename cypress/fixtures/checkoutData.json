@@ -1,0 +1,15 @@
+{
+  "usuario": {
+    "nome": "Marina",
+    "sobrenome": "Teste",
+    "senha": "Senha@123"
+  },
+  "endereco": {
+    "rua": "Rua Teste, 123",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "Los Angeles",
+    "cep": "90001",
+    "telefone": "1234567890"
+  }
+}
