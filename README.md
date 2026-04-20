@@ -12,18 +12,18 @@ https://magento2-demo.magebit.com/
 
 ## 📌 Cenários cobertos
 
-- Cadastro de usuário
-- Login
-- Adição de produto ao carrinho
-- Fluxo completo de checkout (finalização de compra)
+* Cadastro de usuário
+* Login
+* Adição de produto ao carrinho
+* Fluxo completo de checkout (finalização de compra)
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-- Cypress
-- JavaScript
-- Node.js
+* Cypress
+* JavaScript
+* Node.js
 
 ---
 
@@ -31,15 +31,21 @@ https://magento2-demo.magebit.com/
 
 ### 1. Instalar dependências
 
+```bash
 npm install
+```
 
 ### 2. Executar testes em modo headless
 
+```bash
 npx cypress run
+```
 
 ### 3. Executar testes em modo interativo
 
+```bash
 npx cypress open
+```
 
 ---
 
@@ -49,45 +55,58 @@ Os testes foram desenvolvidos utilizando comandos customizados (Cypress Commands
 
 Foram aplicadas boas práticas de automação com foco em:
 
-- Reutilização de código
-- Estabilidade em execução headless
-- Redução de dependência de elementos dinâmicos da interface
-- Validações baseadas em estado da aplicação
+* Reutilização de código
+* Estabilidade em execução headless
+* Redução de dependência de elementos dinâmicos da interface
+* Validações baseadas em estado da aplicação
 
 ---
 
 ## 📂 Estrutura do projeto
 
-- cypress/e2e → testes E2E  
-- cypress/support → comandos customizados  
+* `cypress/e2e` → testes E2E
+* `cypress/support` → comandos customizados
 
 ---
 
 ## 📈 Observações
 
-- Utilização de geração dinâmica de e-mails para evitar conflitos em testes de cadastro  
-- Ajustes de timeout aplicados para lidar com carregamento assíncrono da aplicação  
-- Fluxo de checkout validado de ponta a ponta, simulando jornada real do usuário  
+* Utilização de geração dinâmica de e-mails para evitar conflitos em testes de cadastro
+* Ajustes de timeout aplicados para lidar com carregamento assíncrono da aplicação
+* Fluxo de checkout validado de ponta a ponta, simulando jornada real do usuário
 
 ---
 
 ## 📊 Relatório de execução
 
-Os testes geram um relatório em HTML utilizando Mochawesome, permitindo visualizar os cenários executados e seus resultados.
+Os testes geram automaticamente um relatório em HTML utilizando o **Mochawesome**, permitindo visualizar os cenários executados, status (pass/fail) e tempo de execução.
 
 ### Como gerar o relatório
 
+```bash
 npm run test
+```
 
-### Local do relatório
+### Como visualizar
 
+Após a execução dos testes, abra o arquivo abaixo em um navegador:
+
+```bash
 cypress/reports/report.html
+```
+
+O relatório apresenta:
+
+* Lista de cenários executados
+* Status dos testes (sucesso/falha)
+* Tempo de execução
+* Detalhes de cada etapa
 
 ---
 
 ## 🔧 Melhorias futuras
 
-- Implementação de testes de API  
-- Integração com CI/CD (GitHub Actions)  
-- Melhorias no detalhamento dos relatórios de execução  
-- Separação de massa de dados de teste  
+* Implementação de testes de API
+* Integração com CI/CD (GitHub Actions)
+* Melhorias no detalhamento dos relatórios de execução
+* Separação de massa de dados de teste
