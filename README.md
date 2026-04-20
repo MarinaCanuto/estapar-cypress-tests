@@ -1,48 +1,93 @@
 # Testes Automatizados - Cypress
 
-Este projeto contém testes automatizados E2E desenvolvidos com Cypress, simulando fluxos principais de um e-commerce baseado em Magento.
+Este projeto contém testes automatizados E2E desenvolvidos com Cypress, simulando fluxos principais de um e-commerce baseado no Magento.
+
+---
+
+## 🌐 Base URL
+
+https://magento2-demo.magebit.com/
+
+---
 
 ## 📌 Cenários cobertos
 
-* Cadastro de usuário
-* Login
-* Adição de produto ao carrinho
-* Finalização de compra (checkout)
+- Cadastro de usuário
+- Login
+- Adição de produto ao carrinho
+- Fluxo completo de checkout (finalização de compra)
+
+---
 
 ## 🚀 Tecnologias utilizadas
 
-* Cypress
-* JavaScript
-* Node.js
+- Cypress
+- JavaScript
+- Node.js
+
+---
 
 ## ▶️ Como executar o projeto
 
-1. Instalar dependências:
+### 1. Instalar dependências
 
 npm install
 
-2. Executar testes em modo headless:
+### 2. Executar testes em modo headless
 
 npx cypress run
 
-3. Executar testes em modo interativo:
+### 3. Executar testes em modo interativo
 
 npx cypress open
 
+---
+
 ## 🧠 Abordagem
 
-Os testes foram desenvolvidos utilizando comandos customizados para reutilização de código e melhor organização.
+Os testes foram desenvolvidos utilizando comandos customizados (Cypress Commands) para reutilização de código e melhor organização.
 
-Foram aplicadas validações com foco em estabilidade, evitando dependência de elementos dinâmicos (como menus com hover), garantindo execução consistente em modo headless.
+Foram aplicadas boas práticas de automação com foco em:
+
+- Reutilização de código
+- Estabilidade em execução headless
+- Redução de dependência de elementos dinâmicos da interface
+- Validações baseadas em estado da aplicação
+
+---
+
+## 📂 Estrutura do projeto
+
+- cypress/e2e → testes E2E  
+- cypress/support → comandos customizados  
+
+---
 
 ## 📈 Observações
 
-* Utilizado geração dinâmica de e-mails para evitar conflitos nos testes de cadastro.
-* Ajustes de timeout foram aplicados para lidar com carregamentos assíncronos da aplicação.
-* O fluxo de checkout foi validado de ponta a ponta, simulando a jornada real do usuário.
+- Utilização de geração dinâmica de e-mails para evitar conflitos em testes de cadastro  
+- Ajustes de timeout aplicados para lidar com carregamento assíncrono da aplicação  
+- Fluxo de checkout validado de ponta a ponta, simulando jornada real do usuário  
+
+---
+
+## 📊 Relatório de execução
+
+Os testes geram um relatório em HTML utilizando Mochawesome, permitindo visualizar os cenários executados e seus resultados.
+
+### Como gerar o relatório
+
+npm run test
+
+### Local do relatório
+
+cypress/reports/report.html
+
+---
 
 ## 🔧 Melhorias futuras
 
-- Implementação de testes de API
-- Integração com CI/CD (GitHub Actions)
-- Separação de dados de teste
+- Implementação de testes de API  
+- Integração com CI/CD (GitHub Actions)  
+- Melhorias no detalhamento dos relatórios de execução  
+- Separação de massa de dados de teste  
