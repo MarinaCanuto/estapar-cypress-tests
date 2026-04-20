@@ -62,10 +62,12 @@ Foram aplicadas boas práticas de automação com foco em:
 
 ---
 
-## 📂 Estrutura do projeto
+## 📂 Estrutura do Projeto
 
-* `cypress/e2e` → testes E2E
-* `cypress/support` → comandos customizados
+* **cypress/e2e**: Testes de ponta a ponta (Cenários de Cadastro, Login, Carrinho e Checkout).
+* **cypress/fixtures**: Massas de dados em JSON (Ex: dados de endereço e usuário para o checkout).
+* **cypress/support**: Comandos personalizados e configurações reutilizáveis.
+* **cypress/reports**: Relatórios detalhados das execuções (gerados após o `npm test`).
 
 ---
 
